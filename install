@@ -1,0 +1,7 @@
+#!/bin/sh
+
+chmod +x wifi bluetooth dmenus_base
+
+cp wifi /usr/local/bin/wifi
+cp bluetooth /usr/local/bin/bluetooth
+cp dmenus_base /usr/local/bin/dmenus_base
