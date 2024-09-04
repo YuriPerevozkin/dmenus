@@ -1,0 +1,4 @@
+#!/bin/sh
+
+out=`echo "$1" | sed '/^$/d' | ${DMENUS_CMD:-dmenu}` || exit 1
+echo $out | sed "s/${DMENUS_CHAR:-*}//"

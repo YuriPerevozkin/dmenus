@@ -1,0 +1,9 @@
+#!/bin/sh
+
+con=`bluetoothctl devices Connected | awk '{print $3}'`
+list=`bluetoothctl devices | sed -n "s/ $con$/${DMENUS_CHAR:-*}$con/;/^Device/p"`
+dev=`./dmenus_base "$(echo "$list" | cut -d' ' -f3-)"` || exit 0
+mac=`echo "$list" | awk "/$dev/{print \$2}"`
+
+bluetoothctl pair $mac
+bluetoothctl connect $mac || bluetoothctl disconnect $mac
