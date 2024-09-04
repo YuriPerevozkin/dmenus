@@ -1,0 +1,21 @@
+dmenus
+======
+
+All dmenu scripts you need written in the spirit of suckless
+
+
+Installation
+------------
+    git clone https://github.com/YuriPerevozkin/dmenus.git
+    cd dmenus
+    chmod +x install
+    sudo ./install
+
+Now you can run them from your shell!
+
+
+Configuration
+-------------
+Variables:
+    $DMENUS_CMD [dmenu] - custom dmenu command
+    $DMENUS_CHAR [*] - character before used device
